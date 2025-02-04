@@ -12,8 +12,7 @@ inputstr, N = input().split()
 N = int(N)
 
 total = 0
-for i in range(len(inputstr) - 1, 0):
-    total += charto10(inputstr[i]) * (N ** i)
-    print(i)
-    
+for i in range(len(inputstr)):
+    total += charto10(inputstr[i]) * (N ** (len(inputstr) - i - 1))
+
 print(total)
